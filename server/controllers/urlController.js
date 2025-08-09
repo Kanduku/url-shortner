@@ -2,7 +2,7 @@ const Url = require("../models/Url");
 const shortid = require("shortid");
 const validUrl = require("valid-url");
 
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = 'https://url-shortner-k92v.onrender.com';
 
 exports.createShortUrl = async (req, res) => {
   const { original_url } = req.body;

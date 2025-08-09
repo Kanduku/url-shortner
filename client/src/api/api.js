@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000", // backend URL
+  baseURL: "https://url-shortner-k92v.onrender.com/", // backend URL
 });
 
 export default API;
