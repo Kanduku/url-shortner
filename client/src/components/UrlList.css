@@ -1,0 +1,134 @@
+/* Container to simulate mobile device view on desktop */
+.mobile-simulator {
+  width: 375px;            /* typical mobile device width */
+  max-width: 100%;         /* shrink on smaller windows */
+  margin: 40px auto;       /* center horizontally with vertical margin */
+  padding:0 16px ;
+ /* subtle frame border */
+}
+
+/* Container list styling */
+.url-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "SF Pro Text", sans-serif;
+  width: 100%;
+}
+
+/* Individual list item styling */
+.url-item {
+  background: linear-gradient(145deg, #fbfbfb, #ffffff);
+  border-radius: 20px;
+  padding: 16px 22px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+  align-items: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.url-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Short URL styling */
+.short-url {
+  white-space: nowrap;        /* Prevent line breaks */
+  overflow: hidden;           /* Hide overflow text */
+  text-overflow: ellipsis;    /* Show "..." if text is too long */
+  display: inline-block;      /* Make sure ellipsis works */
+  max-width: 1200px;          /* Or set a max width if needed */
+  vertical-align: middle;
+  color: #007aff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.short-url:hover,
+.short-url:focus {
+  text-decoration: underline;
+  color: #005ecb;
+  outline: none;
+}
+
+/* Arrow between URLs */
+.arrow {
+  color: #b0b0b8;
+  margin: 0 10px; /* horizontal spacing */
+  user-select: none;
+  font-weight: 600;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* Original long URL styling */
+.original-url {
+  color: #1d1d1f;
+  font-size: 0.95rem;
+  word-break: break-word;
+  user-select: text;
+  font-weight: 500;
+  line-height: 1.3;
+  flex-grow: 1;
+  overflow-wrap: anywhere;
+  margin-top: 4px; /* spacing on small devices */
+}
+
+/* Click count styling */
+.clicks {
+  background: #e6f0ff;
+  color: #007aff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 16px;
+  margin-left: 15px;
+  white-space: nowrap;
+  user-select: none;
+  box-shadow: 0 2px 8px rgba(0, 122, 255, 0.15);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.clicks:hover {
+  background: #c6defe;
+  color: #005ecb;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  .url-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+  }
+
+  .short-url {
+    max-width: 100%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+
+  .arrow {
+    display: none; /* Hide arrow on small screens */
+  }
+
+  .original-url {
+    font-size: 0.9rem;
+    margin-top: 6px;
+    width: 100%;
+  }
+
+  .clicks {
+    margin-left: 0;
+    margin-top: 8px;
+    align-self: flex-start;
+  }
+}

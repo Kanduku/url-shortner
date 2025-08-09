@@ -1,0 +1,91 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: background 0.5s ease;
+}
+
+.AppContent {
+  max-width: 600px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.AppContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+  .AppContent {
+    padding: 20px;
+    margin: 10px;
+  }
+}
+
+.InputField {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 10px 0 20px 0;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.InputField:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.PrimaryButton {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.PrimaryButton:hover {
+  background-color: #5a67d8;
+}
+
+.Heading {
+  margin-bottom: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.RadioGroup label {
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.RadioGroup input[type="radio"] {
+  margin-right: 8px;
+}
+
+.Link {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.Link:hover {
+  color: #5a67d8;
+  text-decoration: underline;
+}
